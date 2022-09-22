@@ -52,4 +52,7 @@ class Card(models.Model):
     # card_atk = models.IntegerField()
     card_attribute = models.CharField(max_length=50)#属性
 
+    def __str__(self):
+        return self.card_name
+
     # objects = CardInfoManager()

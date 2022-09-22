@@ -64,7 +64,9 @@ def lll(card_info):
     
 
 def index(request):
-    return HttpResponse("Hello, world. You're at the polls index.")
+    info = Card.objects.get(pk=1)
+    
+    return render(request, 'ygo/index.html')
 
 def insert_data(request):
     lines = load_txt()
