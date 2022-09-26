@@ -2,9 +2,11 @@ import json
 
 from django.shortcuts import render, HttpResponse
 from .models import Card
+from django.http import HttpResponseRedirect
+from django.shortcuts import render
 
 def load_txt():
-    with open(r'E:\workspace\code\ygo_card\ygo_card_info_small.txt') as f:
+    with open('/home/lirui/ygo_web/ygo_card_info_small.txt') as f:
         lines = f.readlines()
         lines = json.loads(lines[0])['data']
     return lines
@@ -62,7 +64,6 @@ def lll(card_info):
             card_attribute = card_attribute,
         )
     
-
 def index(request):
     info = Card.objects.get(pk=1)
     
@@ -76,3 +77,8 @@ def insert_data(request):
             l.append(  lll(i) )
     Card.objects.bulk_create(l)  # 批量插入数据
     return render(request, 'ygo/index.html')
+
+def select_data(request):
+    cards = Card.objects.all()
+    one_card = Card.objects.filter(card_id=86066372)[0]
+    return render(request, 'ygo/selectbottom.html', {'cards':cards, 'one_card':one_card})
