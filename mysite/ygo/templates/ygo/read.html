@@ -5,6 +5,11 @@
 <title>W3Cschool教程(w3cschool.cn)</title> 
 </head>
 <body>
+
+<p>
+{{card_info.card_images}}
+</p>
+
 <p>
 {% load static %}
 <img src="{% static 'images/86066372.jpg' %}" alt="My image">
@@ -23,6 +28,7 @@
     <th>archetype</th>
     <th>race</th>
     <th>attribute</th>
+    <th>linkmarkers</th>
   </tr>
   <tr>
     <th>{{card_info.card_level}}</th>
