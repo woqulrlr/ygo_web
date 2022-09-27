@@ -2,13 +2,17 @@
 <html>
 <body>
 
-<form action="">
-<select name="cards">
-    <!-- {% for card in cards.object.all %} -->
-        <option value="volvo">123</option>
-    <!-- {% endfor %} -->
-</select>
-</form>
+<table border="1">
+<!-- <select name="cards"> -->
+    {% for i in cards %}
+        <tr>
+            <td>{{ i.id }}</td>           
+            <td>{{ i.card_name }}</td>
+            <td>{{ i.card_name }}</td>
+        </tr>
+    {% endfor %}
+<!-- </select> -->
+</table>
 {{one_card.card_name}}
 </body>
 </html>

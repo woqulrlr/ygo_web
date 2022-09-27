@@ -40,19 +40,25 @@ from django.db import models
 #         return card
 
 class Card(models.Model):
-    # card_scale = models.IntegerField()#灵摆刻度
-    # card_def = models.IntegerField()
-    card_linkval = models.IntegerField()
-    card_race = models.CharField(max_length=20)#种族   
-    card_linkmarkers = models.CharField(max_length=50)#连接箭头
-    card_name = models.CharField(max_length=50)
-    card_id = models.IntegerField()
-    card_type = models.CharField(max_length=50)#卡牌类型
-    card_archetype = models.CharField(max_length=50)#字段
-    # card_atk = models.IntegerField()
-    card_attribute = models.CharField(max_length=50)#属性
+    card_scale = models.IntegerField(blank = True, null=True)#灵摆刻度
+    card_def = models.IntegerField(blank = True, null=True)
+    card_linkval = models.IntegerField(blank = True, null=True)
+    card_race = models.CharField(max_length=20, blank = True, null=True)#种族   
+    card_linkmarkers = models.CharField(max_length=50, blank = True, null=True)#连接箭头
+    card_name = models.CharField(max_length=50, blank = True, null=True)
+    card_id = models.IntegerField(blank = True, null=True)
+    card_type = models.CharField(max_length=50, blank = True, null=True)#卡牌类型
+    card_archetype = models.CharField(max_length=50, blank = True, null=True)#字段
+    card_atk = models.IntegerField(blank = True, null=True)
+    card_level = models.IntegerField(blank = True, null=True)
+    card_attribute = models.CharField(max_length=50, blank = True, null=True)#属性
+    card_images = models.CharField(max_length=500, blank = True, null=True)#字段
+    card_desc = models.TextField(max_length=1000, blank = True, null=True)#字段
 
     def __str__(self):
-        return self.card_name
+        return self.card_nameclear
 
     # objects = CardInfoManager()
+
+    # {'level', 'type', 'def', 'card_sets', 'card_prices', 'atk', 'name', 'archetype', 'linkmarkers', 
+    # 'race', 'id', 'card_images', 'linkval', 'desc', 'scale', 'attribute', 'banlist_info'}
