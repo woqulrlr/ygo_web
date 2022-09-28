@@ -14,7 +14,8 @@
             "console": "integratedTerminal",
             "justMyCode": true,
             "args": ["runserver"],
-            "python": "/root/miniconda3/envs/django_demo/bin/python"
+            // "python": "/root/miniconda3/envs/django_demo/bin/python"
+            "python": "E:\\workspace\\miniconda3\\envs\\ygo_web\\python.exe"
         }
     ]
 }

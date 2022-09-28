@@ -17,7 +17,7 @@ def create(request):
 def read(request):
     # request.POST.get('card_name')
     card_name = request.POST.get('card_name')
-    card_info = Card.objects.filter(card_name=card_name)[0]
+    card_info = Card.objects.filter(card_name__contains=card_name)[0]
     card_info = model_to_dict(card_info)
     # dawnload_path = wget.download(card_info['card_images'],'/home/lirui/ygo_web/mysite/static/images')
     # card_info['card_images'] = os.path.join('images', os.path.basename (dawnload_path))
