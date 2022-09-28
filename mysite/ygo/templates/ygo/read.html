@@ -2,17 +2,15 @@
 <html>
 <head> 
 <meta charset="utf-8"> 
-<title>W3Cschool教程(w3cschool.cn)</title> 
+<title>My YGO Card</title> 
 </head>
 <body>
 
 <p>
-{{card_info.card_images}}
-</p>
-
-<p>
 {% load static %}
-<img src="{% static 'images/86066372.jpg' %}" alt="My image">
+<img src="{{card_info.card_images}}" alt="My image">
+<!-- <img src="{% static 'images/86066372.jpg' %}" alt="My image"> -->
+<!-- <img src="https://storage.googleapis.com/ygoprodeck.com/pics/86066372.jpg" alt="My image"> -->
 <!-- <img src="/home/lirui/ygo_web/mysite/static/images/86066372.jpg" alt="Smiley face" width="32" height="32"></p> -->
 </p>
 <table border="1">
