@@ -6,15 +6,15 @@
 </head>
 <body>
 
-<p>
+<!-- <p>
 {% load static %}
 <img src="{{card_info.card_images}}" alt="My image">
-<!-- <img src="{% static 'images/86066372.jpg' %}" alt="My image"> -->
-<!-- <img src="https://storage.googleapis.com/ygoprodeck.com/pics/86066372.jpg" alt="My image"> -->
-<!-- <img src="/home/lirui/ygo_web/mysite/static/images/86066372.jpg" alt="Smiley face" width="32" height="32"></p> -->
 </p>
-<table border="1" width = "200" height = "200">
+<table border="1" width = "200" height = "100">
   <caption>Card Info</caption>
+  <tr>
+    <th><img src="{{card_info.card_images}}" alt="My image"></th>
+  </tr>
   <tr>
     <th>level</th>
     <th>def</th>
@@ -43,10 +43,57 @@
     <th>{{card_info.card_linkmarkers}}</th>
     <th>{{card_info.card_desc}}</th>
   </tr>
+</table> -->
+
+<!-- </body>
+</html> -->
+
+<!-- {'level', 'def', 'atk', 'id', 'linkval', 'scale'} -->
+<!-- {'type', 'name', 'archetype', 'race', 'desc', 'attribute'} -->
+
+<table border = "1">
+  <tr>
+      <td rowspan = "6"><img src="{{card_info.card_images}}" alt="My image"></td>
+      <td><strong>level</strong></td>
+      <td>{{card_info.card_level}}</td>
+      <td><strong>name</strong></td>
+      <td>{{card_info.card_name}}</td>
+  </tr>
+  <tr>
+      <td><strong>atk</strong></td>
+      <td>{{card_info.card_atk}}</td>
+      <td><strong>archetype</strong></td>
+      <td>{{card_info.card_archetype}}</td>
+  </tr>
+  <tr>
+      <td><strong>def</strong></td>
+      <td>{{card_info.card_def}}</td>
+      <td><strong>race</strong></td>
+      <td>{{card_info.card_race}}</td>
+  </tr>
+  <tr>
+      <td><strong>card_id</strong></td>
+      <td>{{card_info.card_id}}</td>
+      <td><strong>attribute</strong></td>
+      <td>{{card_info.card_attribute}}</td>
+  </tr>
+  <tr>
+      <td><strong>linkval</strong></td>
+      <td>{{card_info.card_linkval}}</td>
+      <td><strong>linkmarkers</strong></td>
+      <td>{{card_info.card_linkmarkers}}</td>
+  </tr>
+  <tr>
+      <td><strong>scale</strong></td>
+      <td>{{card_info.card_scale}}</td>
+      <td> </td>
+      <td> </td>
+  </tr>
+  <tr>
+      <td><strong>desc</strong></td>
+      <td colspan = "5">{{card_info.card_desc}}</td>
+  </tr>
 </table>
 
 </body>
 </html>
-
-<!-- {'level', 'def', 'atk', 'id', 'linkval', 'scale'} -->
-<!-- {'type', 'name', 'archetype', 'race', 'desc', 'attribute'} -->
